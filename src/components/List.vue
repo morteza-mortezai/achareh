@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div v-if="loading">در حال دریافت اطلاعات</div>
-    <v-data-table v-else :items="items" :headers="headers" :loading="true">
+    <v-data-table :items="items" :headers="headers" :loading="loading">
     </v-data-table>
     <v-btn @click="$emit('change', 1)">back</v-btn>
   </div>
@@ -88,7 +87,7 @@ export default {
         this.items = res.data;
         this.$swal.fire({
           icon: "success",
-          title: "اظلاعات با موفقیت دریافت شد",
+          title: "اطلاعات با موفقیت دریافت شد",
           showConfirmButton: false,
         });
       } catch (err) {

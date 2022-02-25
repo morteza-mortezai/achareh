@@ -237,7 +237,7 @@ export default {
         );
         this.$swal.fire({
           icon: "success",
-          title: "اظلاعات با موفقیت ارسال شد",
+          title: "اطلاعات با موفقیت ارسال شد",
           showConfirmButton: false,
         });
         this.reset();
